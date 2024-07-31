@@ -4,40 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clothing E-Commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <h1>Clothing Store</h1>
+<body class="bg-gray-100">
+    <header class="bg-gray-800 text-white p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Clothing Store</h1>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Products</a>
-            <a href="#">Contact</a>
+            <a href="#" class="hover:underline mx-2">Home</a>
+            <a href="#" class="hover:underline mx-2">Products</a>
+            <a href="#" class="hover:underline mx-2">Contact</a>
         </nav>
-        <div id="cart">
+        <div id="cart" class="bg-orange-500 p-2 rounded text-white">
             <span>Cart (0)</span>
         </div>
     </header>
 
-    <main>
-        <section id="products">
-            <article class="product">
-                <img src="https://www.aristobrat.in/cdn/shop/files/ClassicShirt_White_1.jpg?v=1709556583&width=2048" alt="Shirt">
-                <h2>Classic Shirt</h2>
-                <p>$19.99</p>
-                <button onclick="addToCart('Classic Shirt', 19.99)">Add to Cart</button>
+    <main class="p-6">
+        <section id="products" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <article class="bg-white p-4 rounded shadow-lg text-center">
+                <img src="shirt.jpg" alt="Shirt" class="w-full h-48 object-cover mb-4 rounded">
+                <h2 class="text-xl font-semibold mb-2">Classic Shirt</h2>
+                <p class="text-orange-500 mb-4">$19.99</p>
+                <button onclick="addToCart('Classic Shirt', 19.99)" class="bg-orange-500 text-white p-2 rounded hover:bg-orange-600">Add to Cart</button>
             </article>
- <article class="product">
-                <img src="https://www.aristobrat.in/cdn/shop/files/ClassicShirt_White_1.jpg?v=1709556583&width=2048" alt="Shirt">
-                <h2>Classic Shirt</h2>
-                <p>$19.99</p>
-                <button onclick="addToCart('Classic Shirt', 19.99)">Add to Cart</button>
+            <article class="bg-white p-4 rounded shadow-lg text-center">
+                <img src="jeans.jpg" alt="Jeans" class="w-full h-48 object-cover mb-4 rounded">
+                <h2 class="text-xl font-semibold mb-2">Blue Jeans</h2>
+                <p class="text-orange-500 mb-4">$39.99</p>
+                <button onclick="addToCart('Blue Jeans', 39.99)" class="bg-orange-500 text-white p-2 rounded hover:bg-orange-600">Add to Cart</button>
             </article>
             <!-- Add more products as needed -->
         </section>
     </main>
 
-    <footer>
+    <footer class="bg-gray-800 text-white text-center p-4 fixed bottom-0 w-full">
         <p>&copy; 2024 Clothing Store</p>
     </footer>
 
